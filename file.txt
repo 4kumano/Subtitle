@@ -1,0 +1,60 @@
+#include<iostream>
+#include<string.h>
+#include <stdio.h>
+using namespace std;
+int main(){
+int NILAI_UAS, NILAI_UTS, NILAI_TUGAS, NILAI_AKHIR;
+double NilaiAkhir;
+
+	struct MAHASISWA
+	{
+		
+		char NIM[50];
+		char NAMA[30];
+		char JURUSAN[50];
+		char MATAKULIAH[30];
+	}M;
+    
+	strcpy(M.JURUSAN,"JURUSAN : TEKNIK INFORMATIKA");
+	strcpy(M.MATAKULIAH,"MATAKULIAH : C++");
+
+	cout<<" ============[Input]==========="<<endl;
+	cout<<" Masukan Nama : ";cin>>M.NAMA;
+	cout<<" Masukan NRP : ";cin>>M.NIM;
+	cout<<" Masukan Nilai Tugas : ";cin>>NILAI_TUGAS;
+	cout<<" Masukan Nilai UTS : ";cin>>NILAI_UTS;
+    cout<<" Masukan Nilai UAS : ";cin>>NILAI_UAS;
+   
+   int nTugas = NILAI_TUGAS*50/100;
+   int nUTS = NILAI_UTS*20/100;
+   int nUAS = NILAI_UAS*30/100;
+	NILAI_AKHIR=(nTugas+nUTS+nUAS);
+	cout<<" ============[Output]==========="<<endl;
+
+	cout<<"NIM : "<<M.NIM<<endl;
+	cout<<"NAMA :"<<M.NAMA<<endl;
+	cout<<M.JURUSAN<<endl;
+	cout<<M.MATAKULIAH<<endl;
+	cout<<"Nilai Tugas : "<<NILAI_TUGAS<<endl;
+	cout<<"Nilai UTS : "<<NILAI_UTS<<endl;
+	cout<<"Nilai UAS : "<<NILAI_UAS<<endl;
+	cout<<"Nilai Akhir : "<<NILAI_AKHIR<<endl;
+	
+	if(NILAI_AKHIR >= 80){
+	cout<<" Grade : A "<<endl;
+	}
+	else if(NILAI_AKHIR >= 70){
+	cout<<" Grade : B "<<endl;
+	}
+	else if(NILAI_AKHIR >= 60){
+	cout<<" Grade : C "<<endl;
+	}
+	else if(NILAI_AKHIR >= 50){
+	cout<<" Grade : D "<<endl;
+	}
+	else if(NILAI_AKHIR >= 0){
+	cout<<" Grade : E "<<endl;
+	}
+	
+	return 0;
+}
