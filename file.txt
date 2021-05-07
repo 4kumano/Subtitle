@@ -14,13 +14,12 @@ double NilaiAkhir;
 		char JURUSAN[50];
 		char MATAKULIAH[30];
 	}M;
-    
+	strcpy(M.NIM,"NIM : 20041057");
+	strcpy(M.NAMA,"NAMA : APRILIDA REZKI AMELIA");
 	strcpy(M.JURUSAN,"JURUSAN : TEKNIK INFORMATIKA");
 	strcpy(M.MATAKULIAH,"MATAKULIAH : C++");
 
 	cout<<" ============[Input]==========="<<endl;
-	cout<<" Masukan Nama : ";cin>>M.NAMA;
-	cout<<" Masukan NRP : ";cin>>M.NIM;
 	cout<<" Masukan Nilai Tugas : ";cin>>NILAI_TUGAS;
 	cout<<" Masukan Nilai UTS : ";cin>>NILAI_UTS;
     cout<<" Masukan Nilai UAS : ";cin>>NILAI_UAS;
@@ -31,8 +30,8 @@ double NilaiAkhir;
 	NILAI_AKHIR=(nTugas+nUTS+nUAS);
 	cout<<" ============[Output]==========="<<endl;
 
-	cout<<"NIM : "<<M.NIM<<endl;
-	cout<<"NAMA :"<<M.NAMA<<endl;
+	cout<<M.NIM<<endl;
+	cout<<M.NAMA<<endl;
 	cout<<M.JURUSAN<<endl;
 	cout<<M.MATAKULIAH<<endl;
 	cout<<"Nilai Tugas : "<<NILAI_TUGAS<<endl;
